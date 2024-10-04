@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대한항공 - 항공편 예약</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header>
+        <h1>DUHYEON AIR</h1>
+        <nav>
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">비행편</a></li>
+                <li><a href="#">예약</a></li></li>
+                <li><a href="#">서비스</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="reservation">
+            <h2>항공편 예약하기</h2>
+            <form id="reservationForm">
+                <label for="departure"><strong>출발지</strong>:</label>
+                <input type="text" id="departure" placeholder="출발지를 입력하세요">
+
+                <label for="destination"><strong>도착지</strong>:</label>
+                <input type="text" id="destination" placeholder="목적지를 입력하세요">
+
+                <label for="date"><strong>출발일자</strong>:</label>
+                <input type="date" id="date">
+
+                <button type="submit">예약하기</button>
+            </form>
+            <div id="message"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DUHYEON AIR. All rights reserved.</p>
+    </footer>
+
+    <script src="script1.js"></script>
+</body>
+</html>

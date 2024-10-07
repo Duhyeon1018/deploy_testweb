@@ -9,9 +9,70 @@
 
 <body>
     <script>
+
         document.write("hello world")
-        
     </script>
+
+    <h1>JavaScript</h1>
+    <script>
+        document.write(1 + 1);
+    </script>
+    <h1>html</h1>
+    1+1
+
+
+    <div>
+        <input type="button" value="hi" onclick="alert('오늘 점심 뭐 먹죠?');">
+    </div>
+
+    <input type="text" onchange="alert('changed')">
+
+
+
+    <input type="text" id="test1" placeholder="Click here, then press down a key." size="40" />
+
+
+    <p id="log"></p>
+    <script>
+
+        const input = document.querySelector("#test1");
+
+        const log = document.getElementById("log");
+
+        input.addEventListener("keydown", logKey);
+
+        function logKey(e) {
+            log.textContent += ` ${e.code}`;
+        }
+    </script>
+
+
+
+    <input id="userId" type="text" placeholder="아이디를 입력해주세요.">
+    <input id="userPassword" type="text" placeholder="패스워드를 입력해주세요.">
+    <input type="button" value="로그인" onclick="showUser()">
+
+    <p id="result"></p>
+    <script>
+        function showUser() {
+            const id = document.getElementById("userId").value;
+            const password = document.getElementById("userPassword").value;
+            alert("아이디: " + id + ", 패스워드: " + password)
+            document.getElementById("result").innerText = "아이디: " + id + ", 패스워드: " + password
+        }
+    </script>
+
+<input id="lunchMenu" type="text" placeholder="먹고싶은 점심메뉴 입력해주세요">
+    <input type="button" value=click 출력하기 onclick="showMenu()">
+
+    <h1 id="resultMenu"></h1>
+    <script>
+        function showMenu() {
+            const menu= document.getElementById("lunchMenu").value;
+            document.getElementById("resultMenu").innerText = "내가 먹고싶은 점심메뉴= " + menu
+        }
+    </script>
+
 </body>
 
 </html>

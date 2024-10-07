@@ -90,6 +90,11 @@ article {
     width: 300px;
 }
 
+a {
+    color: white; 
+    text-decoration: none; /* 밑줄 제거 */
+}
+
 footer {
     background-color: skyblue;
     text-align: center;

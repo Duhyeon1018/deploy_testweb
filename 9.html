@@ -51,7 +51,9 @@
 
     #글자바꾸기놀이 {
         font-family: "Nanum Pen Script", cursive;
+        color: blue;
     }
+
 
     .color {
         color: red;
@@ -80,109 +82,182 @@
     }
 
     .navi-title {
-    width: 960px;
-    margin : 0 auto;
-  }
-  .navi{
-    width:960px;
-    height:60px;
-    padding-bottom:10px;
-    border-bottom:5px solid #ccc;
-  }
-  .navi ul{
-    list-style: none;
-    padding-top:10px; 
-    padding-bottom:5px;
-  }
-  .navi ul li {
-    float:left;
-    width:150px;
-    padding:10px;   
-  }
-  .navi a:link, .navi a:visited{
-    display:block;
-    font-size:15px;
-    color:#000;
-    padding: 10px; 
-    text-decoration: none;  /* 밑줄 없앰 */
-    text-align: center;
-  }
-  .navi a:hover,  .navi a:focus {
-    background-color:#222;  /* 배경 색 */
-    color:#fff;  /* 글자 색 */
-  }
-  .navi a:active {
-    background-color:#f00;  /* 배경 색 */
-  }
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    .navi {
+        width: 960px;
+        height: 60px;
+        padding-bottom: 10px;
+        border-bottom: 5px solid #ccc;
+    }
+
+    .navi ul {
+        list-style: none;
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+
+    .navi ul li {
+        float: left;
+        width: 150px;
+        padding: 10px;
+    }
+
+    .navi a:link,
+    .navi a:visited {
+        display: block;
+        font-size: 15px;
+        color: #000;
+        padding: 10px;
+        text-decoration: none;
+        /* 밑줄 없앰 */
+        text-align: center;
+    }
+
+    .navi a:hover,
+    .navi a:focus {
+        background-color: #222;
+        /* 배경 색 */
+        color: #fff;
+        /* 글자 색 */
+    }
+
+    .navi a:active {
+        background-color: #f00;
+        /* 배경 색 */
+    }
+
+    .box {
+        width: 200px;
+        height: 100px;
+        display: inline-block;
+        margin: 15px;
+        border-style: groove;
+        border-width: 3px;
+    }
+
+    #box1 {
+        border-color: red;
+        border-radius: 10px;
+        border-style: dotted;
+    }
+
+    #box2 {
+        border-top-color: yellow;
+        border-bottom-color: green;
+        border-left-color: aquamarine;
+        border-right-color: black;
+    }
+
+    #box3 {
+        border-style: dashed;
+        border-color: bisque;
+        border-radius: 30px;
+    }
+
+    #box4 {
+        border-style: groove;
+        border-top-color: rgb(228, 140, 154);
+        border-left-color: rgba(175, 50, 71, 0.836);
+        border-right-color: violet;
+        border-bottom-color: peru;
+
+    }
+
+    #box5 {
+        background-image: url(img1.jpg);
+        background-size: 100% 100%;
+        background-repeat:no-repeat;
+        color: white;
+        margin: 20px;
+        padding: auto;
+        
+    }
+
+
+
+    header {
+        border-bottom: 3px;
+        border-bottom-style: solid;
+        color: red;
+        border-color: skyblue;
+
+    }
+
+    #round {
+        border-radius: 20%;
+    }
+
+    #circle {
+
+        border-radius: 50%;
+    }
+
+
 
 </style>
 
 
-<body>
-    <h1>5단원</h1>
-    <form action"#" method="get">
-        <fieldset>
-            <label>아이디: <input type="text" id="user_id" size="10" placeholder="입력하시오"></label>
-            <label>비밀번호: <input type="password" id="user_pw" size="10" placeholder="어렵다"></label>
-            <div>
-                <label>전화번호:<input type="phone" id="user_phone" size="10" placeholder="휴대폰 번호를 입력하시오."></label>
-                <input type="submit" value="로그인">
-            </div>
-        </fieldset>
+<header>미니실습 및 과제</header>
 
+
+<h1>5단원</h1>
+<form action"#" method="get">
+    <fieldset>
+        <label>아이디: <input type="text" id="user_id" size="10" placeholder="입력하시오"></label>
+        <label>비밀번호: <input type="password" id="user_pw" size="10" placeholder="어렵다"></label>
         <div>
-            <p> <input type="date">
-                <input type="month">
-                <input type="week">
-            </p>
+            <label>전화번호:<input type="phone" id="user_phone" size="10" placeholder="휴대폰 번호를 입력하시오."></label>
+            <input type="submit" value="로그인">
         </div>
+    </fieldset>
 
-        <input type="button" value="집으로가기" onclick="window.open('1.html')">
-
-
-    </form>
-
-    <h1>6단원</h1>
-    <div id="container">
-
-        <p>나는집에 가고싶다 <span class="accent">격하게</span>가고싶다</p>
-        <p>잘하고 싶어서 항상 출퇴근길이나 집에서 유튜브도 찾아보고 하는데 이해가안간다</p>
-        <p>이게 맞나 싶다.</p>
-    </div>
-    <h1 id="글자바꾸기놀이">7단원
-    </h1>
-    <p id="글자바꾸기놀이" style="text-decoration: underline;"><span class="color">글자바꾸기 놀이와 글자색바꿔보기.</span></p>
-
-
-
-
-    <h1>8단원</h1>
-    ㅇ
-    <h1>9단원</h1>
-    ㅇ
-
-    <h1>10단원</h1>
     <div>
-        <ul>
-            <li><a>무엇이무엇이 똑같을까: </a></li>
-            <li><a href="#">첫째</a></li>
-            <li><a href="#">둘째</a></li>
-            <li><a href="#">셋째 3</a></li>
-            <li><a href="#">넷째 4</a></li>
-        </ul>
-    </div>
-    <div class="navi-title">
-        <nav class="navi">
-            <ul>
-                <li><a href="#">이용 안내</a></li>
-                <li><a href="#">객실 소개</a></li>
-                <li><a href="#">예약 방법 및 요금</a></li>
-                <li><a href="#">예약하기</a></li>
-            </ul>
-        </nav>
+        <p> <input type="date">
+            <input type="month">
+            <input type="week">
+        </p>
     </div>
 
-    <h1>11단원</h1>
+    <input type="button" value="집으로가기" onclick="window.open('1.html')">
+
+
+</form>
+
+<h1>6단원</h1>
+<div id="container">
+
+    <p>나는집에 가고싶다 <span class="accent">격하게</span>가고싶다</p>
+    <p>잘하고 싶어서 항상 출퇴근길이나 집에서 유튜브도 찾아보고 하는데 이해가안간다</p>
+    <p>이게 맞나 싶다.</p>
+</div>
+
+
+
+<h1 id="글자바꾸기놀이">7단원
+</h1>
+<p id="글자바꾸기놀이">전체적인 글꼴 바꾸고, 7단원만 글자바꾸기 놀이와 글자색바꿔보기.</p>
+
+
+
+
+<h1>8단원</h1>
+<div id="box1" class="box"> </div>
+<div id="box2" class="box"> </div>
+<div id="box3" class="box"> </div>
+<div id="box4" class="box"> </div>
+
+<img src="cat.jpg" id="round">
+<img src="cat.jpg" id="round">
+<img src="photo.jpg" id="circle">
+
+
+<h1>9단원</h1>
+<p id="box5">올바른 비행을 위한 우리 모두의노력<br>첫째, 안전벨트를 잘 메야한다.<br>둘째,승무원의 지시를 잘 따라야한다.</p>
+
+
 
 
 

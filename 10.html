@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            width: 120px;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        li a {
+            padding: 5px 20px;
+            font-size: 14px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a[href] {
+            background: white;
+            font-weight: bold;
+        }
+
+        .navi-title {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .navi {
+            width: 960px;
+            height: 60px;
+            padding-bottom: 10px;
+            border-bottom: 5px solid skyblue;
+        }
+
+        .navi ul {
+            list-style: none;
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
+
+        .navi ul li {
+            float: left;
+            width: 150px;
+            padding: 10px;
+        }
+
+        .navi a:link,
+
+        .navi a:visited {
+            display: block;
+            font-size: 15px;
+            color: #000;
+            padding: 10px;
+            text-decoration: none;
+
+            text-align: center;
+        }
+
+        .navi a:hover .navi a:focus {
+            background-color: skyblue;
+
+            color: #fff;
+
+        }
+
+        .navi a:active {
+            background-color: navy;
+
+        }
+
+        a:visited {
+            color: black;
+
+        }
+
+        .box:hover {
+            width: 200px;
+            height: 200px;
+            transform: rotate(360deg);
+            transition: 3s ease-in;
+        }
+
+        #container {
+            width: 500px;
+            margin: 20px auto;
+        }
+
+        .pic {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 50px;
+        }
+
+        #img1 {
+
+            background-color: gray;
+            border: none transparent;
+            animation-name: shape;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #img2 {
+            background-color: skyblue;
+            border: none transparent;
+            animation-name: rotate;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes shape {
+            from {
+                border: none transparent;
+            }
+
+            to {
+                border: none;
+                border-radius: 50%;
+            }
+        }
+
+        @keyframes rotate {
+
+
+            from {
+                transform: rotate(0deg)
+            }
+
+            to {
+                transform: rotate(360deg);
+
+            }
+        }
+
+        #wrapper {
+            width: 700px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 100px);
+            grid-template-areas:
+                "box1 box1 box1"
+                "box2 box3 box3"
+                "box2 . box4";
+        }
+
+        .가족 {
+            padding: 30px;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .가족1 {
+            background-color: #19a130;
+            grid-area: box1;
+        }
+
+        .가족2 {
+            background-color: #5e2135;
+            grid-area: box2;
+        }
+
+        .가족3 {
+            background-color: #6c8ead;
+            grid-area: box3;
+        }
+
+        .가족4 {
+            background-color: #af3d9c;
+            grid-area: box4;
+        }
+    </style>
+
+
+    <h1>10단원</h1>
+    <div class="color">
+        <ul>
+            <li><a>
+                    <p>무엇이 똑같을까</p>
+                </a></li>
+            <li><a href="#">첫째</a></li>
+            <li><a href="#">둘째</a></li>
+            <li><a href="#">셋째 </a></li>
+            <li><a href="#">넷째 </a></li>
+        </ul>
+    </div>
+    <div class="navi-title">
+        <nav class="navi">
+            <ul>
+                <li><a href="#">이용 안내</a></li>
+                <li><a href="#">객실 소개</a></li>
+                <li><a href="#">예약 방법 및 요금</a></li>
+                <li><a href="#">예약하기</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1>11단원</h1>
+    <div id="src"><img src="cat.jpg" class="box">
+        <img src="cat.jpg" class="box">
+        <img src="prod1.jpg" class="box">
+    </div>
+
+
+    <div img id="container">
+        <img src="cat.jpg" class="pic" id="img1">
+        <img src="flight.jpg" class="pic" id="img2">
+
+
+
+
+    </div>
+
+    <h1>12단원</h1>
+
+    <div id="wrapper">
+        <div class="가족1">그리드연습</div>
+        <div class="가족2">그리드연습1</div>
+        <div class="가족3">그리드이해</div>
+        <div class="가족4">그리드복습</div>
+    </div>
+
+
+    <h1>13단원</h1>
+    <h1 id="heading">연습</h1>
+    <button>클릭하세요</button>
+
+        <script>
+            var heading = document.querySelector('#heading');
+            heading.onclick = function () {
+                heading.style.color = "green";
+            }
+
+
+
+        </script>
+
+
+</html>

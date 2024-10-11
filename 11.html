@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 미니실습</title>
+
+</head>
+<style>
+    h1 {
+        display: block;
+        text-align: center;
+        color: purple;
+        text-decoration: none;
+        font-size: 30px;
+        border-bottom: solid;
+        border-color: pink;
+    }
+
+    a:link,
+    a:visited {
+        color: black;
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
+        width: 500px;
+        margin: 10px auto;
+        padding: 0;
+    }
+
+    li {
+        display: inline-block;
+        width: 120px;
+        border: 1px solid #ccc;
+        padding: 10px 15px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #result {
+        width: 500px;
+        height: 300px;
+        margin: 30px auto;
+        border: 2px solid #ccc;
+        border-radius: 15px;
+
+    }
+
+    p {
+        width: 80%;
+        padding: 10px;
+        line-height: 2em;
+    }
+</style>
+
+<body>
+
+
+    <h1><b>미니실습</b></h1>
+    <ul>
+        <li><a href="#" onclick="changeBg('sushi.jpg')">초밥</a></li>
+        <li><a href="#" onclick="changeBg('gyukatsu.jpg')">규카츠</a></li>
+        <li><a href="#" onclick="changeBg('ramen.jpg')">라멘</a></li>
+    </ul>
+    <div id="result"></div>
+
+
+    <script>
+        function changeBg(img) {
+        var result = document.querySelector('#result');
+        result.style.backgroundImage = 'url(' + img + ')';
+        result.style.backgroundSize='cover'
+        result.style.backgroundPosition = 'center';
+        }
+    </script>
+</body>
+
+</html>

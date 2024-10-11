@@ -44,22 +44,26 @@
             margin: 30px auto;
             border: 2px solid #ccc;
             border-radius: 15px;
-            position: relative; 
-            overflow: hidden; 
+            position: relative;
+            overflow: hidden;
+            transition:all 0.5s;
         }
-        
-      
-        
-        
+
+        #result:hover {
+            background-size: 120% !important
+        }
+
+
+
 
         .text {
             position: absolute;
-            bottom: 10px; 
-            left: 10px; 
-            color: white; 
-            background-color: rgba(0, 0, 0, 0.5); 
-            padding: 5px; 
-            border-radius: 5px; 
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -67,9 +71,15 @@
 <body>
     <h1><b>미니실습</b></h1>
     <ul>
-        <li><a href="#" onclick="changeBg('sushi.jpg', '메뉴:사케동<br>가격: 1300¥<br>위치:일본 〒542-0071 Osaka, Chuo Ward, Dotonbori, 1 Chome−7−24 道頓堀ビル １F 四海樓 ')">초밥</a></li>
-        <li><a href="#" onclick="changeBg('gyukatsu.jpg', '메뉴:규카츠<br>가격: 2630¥<br>위치:일본 〒542-0076 Osaka, Chuo Ward, Namba, 3 Chome−6−17 なんばチップスビル B1F ')">규카츠</a></li>
-        <li><a href="#" onclick="changeBg('ramen.jpg', '메뉴:라멘<br>가격: 1000¥<br>위치:일본 〒542-0084 Osaka, Chuo Ward, Souemoncho, 7−18 (㈱)田舎そばビル')">라멘</a></li>
+        <li><a href="#"
+                onclick="changeBg('무화과케이크.jpg', '메뉴:무화과케이크<br>가격: 8000원<br>위치:부산 부산진구 전포대로176번길 28 1층')">케이크</a>
+        </li>
+        <li><a href="#"
+                onclick="changeBg('소바.jpg', '메뉴:소바<br>가격: 12000원<br>위치:부산 부산진구 동천로 105 1층 칸다소바')">소바</a>
+        </li>
+        <li><a href="#"
+                onclick="changeBg('이재명피자.jpg', '메뉴:피자<br>가격: 29000원<br>위치:부산 부산진구 전포대로209번길 21')">피자</a>
+        </li>
     </ul>
     <div id="result">
         <div class="text"></div>
@@ -81,7 +91,7 @@
             var textElement = document.querySelector('.text'); // 텍스트 요소 선택
 
             result.style.backgroundImage = 'url(' + img + ')';
-            result.style.backgroundSize = 'cover';
+            result.style.backgroundSize = '100%';
             result.style.backgroundPosition = 'center';
             textElement.innerHTML = text;
         }

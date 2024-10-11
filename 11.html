@@ -23,6 +23,7 @@
         }
 
         ul {
+            display:flex;
             list-style: none;
             width: 500px;
             margin: 10px auto;
@@ -46,7 +47,7 @@
             border-radius: 15px;
             position: relative;
             overflow: hidden;
-            transition:all 0.5s;
+            transition: all 0.5s;
         }
 
         #result:hover {
@@ -68,17 +69,18 @@
     </style>
 </head>
 
-<body>
+<body onload="changeBg('무화과케이크.jpg', '메뉴:무화과케이크<br>가격: 8000원<br>위치:부산 부산진구 전포대로176번길 28 1층')">
     <h1><b>미니실습</b></h1>
     <ul>
-        <li><a href="#"
-                onclick="changeBg('무화과케이크.jpg', '메뉴:무화과케이크<br>가격: 8000원<br>위치:부산 부산진구 전포대로176번길 28 1층')">케이크</a>
+        <li><a href="#" onclick="changeBg('무화과케이크.jpg', '메뉴:무화과케이크<br>가격: 8000원<br>위치:부산 부산진구 전포대로176번길 28 1층')">케이크</a>
         </li>
-        <li><a href="#"
-                onclick="changeBg('소바.jpg', '메뉴:소바<br>가격: 12000원<br>위치:부산 부산진구 동천로 105 1층 칸다소바')">소바</a>
+        <li><a href="#" onclick="changeBg('소바.jpg', '메뉴:소바<br>가격: 12000원<br>위치:부산 부산진구 동천로 105 1층 칸다소바')">소바</a>
         </li>
-        <li><a href="#"
-                onclick="changeBg('이재모피자.jpg', '메뉴:피자<br>가격: 29000원<br>위치:부산 부산진구 전포대로209번길 21')">피자</a>
+        <li><a href="#" onclick="changeBg('이재모피자.jpg', '메뉴:피자<br>가격: 29000원<br>위치:부산 부산진구 전포대로209번길 21')">피자</a>
+        </li>
+        <li><a href="#" onclick="changeBg('고기.jpg', '메뉴:소고기<br>가격: 15000원(150g)<br>위치:부산 부산진구 전포대로189번길 30 103호 3FOUND')">고기</a>
+        </li>
+        <li><a href="#" onclick="changeBg('국밥.jpg', '메뉴:갈비탕<br>가격: 12000원<br>위치:부산 부산진구 새싹로 33 1층 강갈비탕')">갈비탕</a>
         </li>
     </ul>
     <div id="result">

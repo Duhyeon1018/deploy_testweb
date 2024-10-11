@@ -44,41 +44,22 @@
             margin: 30px auto;
             border: 2px solid #ccc;
             border-radius: 15px;
-            position: relative;
-            /* 자식 요소 위치 조정을 위해 */
-            overflow: hidden;
-            /* 자식 요소가 박스를 넘어가지 않도록 */
+            position: relative; 
+            overflow: hidden; 
         }
-
-        #result img {
-            max-width: 100%;
-            /* 최대 너비를 100%로 설정 */
-            max-height: 100%;
-            /* 최대 높이를 100%로 설정 */
-            position: absolute;
-            /* 절대 위치 설정 */
-            top: 50%;
-            /* 수직 중앙 정렬 */
-            left: 50%;
-            /* 수평 중앙 정렬 */
-            transform: translate(-50%, -50%);
-            /* 중앙으로 이동 */
-        }
+        
+      
+        
+        
 
         .text {
             position: absolute;
-            bottom: 10px;
-            /* 아래쪽 여백 */
-            left: 10px;
-            /* 왼쪽 여백 */
-            color: white;
-            /* 텍스트 색상 */
-            background-color: rgba(0, 0, 0, 0.5);
-            /* 반투명 배경 */
-            padding: 5px;
-            /* 여백 */
-            border-radius: 5px;
-            /* 둥근 테두리 */
+            bottom: 10px; 
+            left: 10px; 
+            color: white; 
+            background-color: rgba(0, 0, 0, 0.5); 
+            padding: 5px; 
+            border-radius: 5px; 
         }
     </style>
 </head>
@@ -86,12 +67,12 @@
 <body>
     <h1><b>미니실습</b></h1>
     <ul>
-        <li><a href="#" onclick="changeBg('sushi.jpg', '가격: 1300¥<br>위치:일본 〒542-0071 Osaka, Chuo Ward, Dotonbori, 1 Chome−7−24 道頓堀ビル １F 四海樓 ')">초밥</a></li>
-        <li><a href="#" onclick="changeBg('gyukatsu.jpg', '가격: 2630¥<br>위치:일본 〒542-0076 Osaka, Chuo Ward, Namba, 3 Chome−6−17 なんばチップスビル B1F ')">규카츠</a></li>
-        <li><a href="#" onclick="changeBg('ramen.jpg', '가격: 1000¥<br>위치:일본 〒542-0084 Osaka, Chuo Ward, Souemoncho, 7−18 (㈱)田舎そばビル')">라멘</a></li>
+        <li><a href="#" onclick="changeBg('sushi.jpg', '메뉴:사케동<br>가격: 1300¥<br>위치:일본 〒542-0071 Osaka, Chuo Ward, Dotonbori, 1 Chome−7−24 道頓堀ビル １F 四海樓 ')">초밥</a></li>
+        <li><a href="#" onclick="changeBg('gyukatsu.jpg', '메뉴:규카츠<br>가격: 2630¥<br>위치:일본 〒542-0076 Osaka, Chuo Ward, Namba, 3 Chome−6−17 なんばチップスビル B1F ')">규카츠</a></li>
+        <li><a href="#" onclick="changeBg('ramen.jpg', '메뉴:라멘<br>가격: 1000¥<br>위치:일본 〒542-0084 Osaka, Chuo Ward, Souemoncho, 7−18 (㈱)田舎そばビル')">라멘</a></li>
     </ul>
     <div id="result">
-        <div class="text">여기에 텍스트가 표시됩니다.</div>
+        <div class="text"></div>
     </div>
 
     <script>
@@ -104,7 +85,6 @@
             result.style.backgroundPosition = 'center';
             textElement.innerHTML = text;
         }
-
     </script>
 </body>
 

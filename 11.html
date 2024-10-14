@@ -16,14 +16,8 @@
             border-color: pink;
         }
 
-        a:link,
-        a:visited {
-            color: black;
-            text-decoration: none;
-        }
-
         ul {
-            display:flex;
+            display: flex;
             list-style: none;
             width: 500px;
             margin: 10px auto;
@@ -37,6 +31,7 @@
             padding: 10px 15px;
             font-size: 16px;
             text-align: center;
+            cursor: pointer;
         }
 
         #result {
@@ -54,9 +49,6 @@
             background-size: 120% !important
         }
 
-
-
-
         .text {
             position: absolute;
             bottom: 10px;
@@ -66,36 +58,144 @@
             padding: 5px;
             border-radius: 5px;
         }
+
+        .input-container {
+            text-align: center;
+            margin: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            width: 200px;
+            transition: all 0.3s ease;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            transition: all 1s ease; 
+        }
+
+        
+        input:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+        }
+
+      
+        button:hover {
+            background-color: bisque; 
+            color: black; 
+        }
+
+        .lunch {
+            border: solid;
+            border-radius: 30px;
+            color: gray;
+            border-color: bisque;
+            
+        }
+
+
     </style>
 </head>
 
-<body onload="changeBg('무화과케이크.jpg', '메뉴:무화과케이크<br>가격: 8000원<br>위치:부산 부산진구 전포대로176번길 28 1층')">
+<body>
     <h1><b>미니실습</b></h1>
+    
+ 
+    <div class="input-container">
+        <input type="text" id="menu-name" placeholder="메뉴 이름 입력" class="lunch">
+        <input type="text" id="menu-price" placeholder="가격 입력" class="lunch">
+        <input type="text" id="menu-location" placeholder="위치 입력" class="lunch">
+        <input type="text" id="menu-image" placeholder="이미지 파일명 입력 (예: cake.jpg)" class="lunch">
+        <button onclick="addMenu()" class="lunch"><b>메뉴추가</b></button>
+        <button onclick="removeMenu()" class="lunch"><b>메뉴삭제</b></button>
+    </div>
+
+   
     <ul>
-        <li><a href="#" onclick="changeBg('무화과케이크.jpg', '메뉴:무화과케이크<br>가격: 8000원<br>위치:부산 부산진구 전포대로176번길 28 1층')">케이크</a>
-        </li>
-        <li><a href="#" onclick="changeBg('소바.jpg', '메뉴:소바<br>가격: 12000원<br>위치:부산 부산진구 동천로 105 1층 칸다소바')">소바</a>
-        </li>
-        <li><a href="#" onclick="changeBg('이재모피자.jpg', '메뉴:피자<br>가격: 29000원<br>위치:부산 부산진구 전포대로209번길 21')">피자</a>
-        </li>
-        <li><a href="#" onclick="changeBg('고기.jpg', '메뉴:소고기<br>가격: 15000원(150g)<br>위치:부산 부산진구 전포대로189번길 30 103호 3FOUND')">고기</a>
-        </li>
-        <li><a href="#" onclick="changeBg('국밥.jpg', '메뉴:갈비탕<br>가격: 12000원<br>위치:부산 부산진구 새싹로 33 1층 강갈비탕')">갈비탕</a>
-        </li>
+        <li onclick="showRandomMenu()" class="lunch">점메추</li>
     </ul>
+
+    
     <div id="result">
         <div class="text"></div>
     </div>
 
     <script>
+       
+        let menus = [
+            {
+                img: '무화과케이크.jpg',
+                text: '메뉴: 무화과케이크<br>가격: 8000원<br>위치: 부산 부산진구 전포대로176번길 28 1층'
+            },
+            {
+                img: '소바.jpg',
+                text: '메뉴: 소바<br>가격: 12000원<br>위치: 부산 부산진구 동천로 105 1층 칸다소바'
+            },
+            {
+                img: '이재모피자.jpg',
+                text: '메뉴: 피자<br>가격: 29000원<br>위치: 부산 부산진구 전포대로209번길 21'
+            },
+            {
+                img: '고기.jpg',
+                text: '메뉴: 소고기<br>가격: 15000원(150g)<br>위치: 부산 부산진구 전포대로189번길 30 103호 3FOUND'
+            },
+            {
+                img: '국밥.jpg',
+                text: '메뉴: 갈비탕<br>가격: 12000원<br>위치: 부산 부산진구 새싹로 33 1층 강갈비탕'
+            }
+        ];
+
+      
+        function showRandomMenu() {
+            const randomIndex = Math.floor(Math.random() * menus.length);
+            const randomMenu = menus[randomIndex];
+            changeBg(randomMenu.img, randomMenu.text);
+        }
+
+       
         function changeBg(img, text) {
             var result = document.querySelector('#result');
-            var textElement = document.querySelector('.text'); // 텍스트 요소 선택
+            var textElement = document.querySelector('.text'); 
 
             result.style.backgroundImage = 'url(' + img + ')';
             result.style.backgroundSize = '100%';
             result.style.backgroundPosition = 'center';
             textElement.innerHTML = text;
+        }
+
+        
+        function addMenu() {
+            const name = document.getElementById('menu-name').value;
+            const price = document.getElementById('menu-price').value;
+            const location = document.getElementById('menu-location').value;
+            const image = document.getElementById('menu-image').value;
+
+            if (name && price && location && image) {
+                const newMenu = {
+                    img: image,
+                    text: `메뉴: ${name}<br>가격: ${price}원<br>위치: ${location}`
+                };
+                menus.push(newMenu);
+                alert('메뉴가 추가되었습니다!');
+            } else {
+                alert('모든칸을 채워주세요');
+            }
+        }
+
+      
+        function removeMenu() {
+            const name = document.getElementById('menu-name').value;
+
+            const index = menus.findIndex(menu => menu.text.includes(`메뉴: ${name}`));
+            if (index !== -1) {
+                menus.splice(index, 1);
+                alert('메뉴가 삭제되었습니다!');
+            } else {
+                alert('해당 메뉴를 찾을 수 없습니다.');
+            }
         }
     </script>
 </body>

@@ -115,10 +115,6 @@
     .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
     }
-
-    
- 
-
 </style>
 
 
@@ -205,7 +201,8 @@
     <header data-bs-theme="dark">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="http://127.0.0.1:5501/241015%EC%8B%A4%EC%8A%B5.html" target="_blank">DUHYEON</a>
+                <a class="navbar-brand" href="http://127.0.0.1:5501/241015%EC%8B%A4%EC%8A%B5.html"
+                    target="_blank">DUHYEON</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -213,7 +210,8 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5501/241015%EC%8B%A4%EC%8A%B5.html">Home</a>
+                            <a class="nav-link active" aria-current="page"
+                                href="http://127.0.0.1:5501/241015%EC%8B%A4%EC%8A%B5.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Link</a>
@@ -241,7 +239,8 @@
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="carousel-item active"
+                    style="background-image: url('img/newyork.jpg'); background-size: cover; background-position: center;">
                     <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                         aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                         <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
@@ -254,41 +253,46 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
+
+
+                <div class="carousel-item"
+                    style="background-image: url('img/kyoto.jpg'); background-size: cover; background-position: center;">
                     <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                         aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                         <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
                     </svg>
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Another example headline.</h1>
-                            <p>Some representative placeholder content for the second slide of the carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
-                    </svg>
-                    <div class="container">
-                        <div class="carousel-caption text-end">
-                            <h1>One more for good measure.</h1>
-                            <p>Some representative placeholder content for the third slide of this carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                            <h1>부산 - 교토 <br>직항</h1>
+                            <p class="opacity-75">클릭해서 바로 확인해보세요<br>부산(PUS) ~ 교토(KYO) 340,000 ~</p>
+                            <p><a class="btn btn-lg btn-primary" href="#">예매하기</a></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="carousel-item"
+                style="background-image: url('img/taiwan.jpg'); background-size: cover; background-position: center;">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+                </svg>
+                <div class="container">
+                    <div class="carousel-caption text-end">
+                        <h1>요즘 대세<br> 인천 - 타이페이</h1>
+                        <p>최저가로 만나보세요<br>인천 - 타오위안<br> 450,000 ~</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">예매하기</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
         </div>
 
 
@@ -304,10 +308,12 @@
                     <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder"
                         preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+                        <title>인천-LA</title>
+                        <circle cx="70" cy="70" r="70" fill="var(--bs-secondary-color)" />
+                        <image href="img/newyork.jpg" x="0" y="0" width="400" height="270" clip-path="circle(70px at 70px 70px)" />
                     </svg>
-                    <h2 class="fw-normal">Heading</h2>
+                    </svg>
+                    <h2 class="fw-normal">인천 - 로스엔젤레스</h2>
                     <p>Some representative placeholder content for the three columns of text below the carousel. This is
                         the first column.</p>
                     <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>

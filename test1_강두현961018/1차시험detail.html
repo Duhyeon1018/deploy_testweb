@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="1차시험detail.css">
+</head>
+<body>
+    <header>
+ 
+
+    </header>
+
+    <main>
+        <div class="product-container">
+            <div class="image-section">
+               
+                <img id="main-image" src="sanfransico.jpg" alt="Main Image">
+                <div class="image-thumbnails">
+                  
+                    <img src="sanfransico.jpg" alt="Thumbnail 1" class="thumbnail" onclick="changeImage('image1.png')">
+                    <img src="london.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage('image2.png')">
+                    <img src="tokyo1.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage('image3.png')">
+                </div>
+            </div>
+
+         
+
+            <div class="details-section">
+                <h1><span style="color: red;">#출발임박★</span><br> 샌프란시스코 IN - LA OUT<br>미서부 11일</h1>
+                <p class="price">₩ 3,490,000</p>
+                <div class="booking-form">
+                    <label for="start-date">출발일자:</label>
+                    <input type="date" id="start-date">
+                    <label for="persons">인원:</label>
+                    <select id="persons">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                    <button id="book-now">예약하기</button>
+                </div>
+                <p class="description">가장 아름답고 여유로운 지역 중 하나인 미 서부, 골드러쉬의 성지 샌프란시스코와 사막위의
+                    기적이라고 불리우는 라스베가스, 서핑의 도시 LA까지 함께 즐겨보세요!
+                </p>
+            </div>
+        </div>
+
+        <div class="reviews-section">
+            <h2>Best Review</h2>
+            <div class="review-box">
+                <h3>최고의여행이었어요</h3>
+                <p>제가la에있었을때~</p>
+                <p class="reviewer">박깡두,240130</p>
+            </div>
+            <div class="review-box">
+                <h3>다시 가고싶은 여행</h3>
+                <p>짱짱맨이였어요</p>
+                <p class="reviewer">짱짱맨, 241030</p>
+            </div>
+            <div class="review-box">
+                <h3>휴양지최고</h3>
+                <p>추천합니다</p>
+                <p class="reviewer">opener, 241018</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 DUHYEON TOUR. All rights reserved.</p>
+    </footer>
+
+    <script src="1차시험detail.js"></script>
+</body>
+</html>
+

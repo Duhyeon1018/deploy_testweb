@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+}
+
+.product-container {
+    display: flex;
+    padding: 20px;
+}
+
+.image-section {
+    flex: 1;
+    text-align: center;
+}
+
+#main-image {
+    width: 400px; 
+    height: 400px; 
+    object-fit: cover; 
+    transition: opacity 1s ease-in-out;
+}
+
+.image-thumbnails {
+    margin-top: 10px;
+}
+
+.thumbnail {
+    width: 80px; 
+    height: 80px; 
+    margin: 0 5px;
+    cursor: pointer;
+    object-fit: cover; 
+}
+
+.thumbnail:hover {
+    opacity: 0.7; }
+
+.details-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4d4d;
+}
+
+.booking-form {
+    margin-top: 20px;
+}
+
+.booking-form label {
+    display: block;
+    margin: 30px 0 5px;
+    padding: 5px
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#book-now {
+    width: 100%;
+    padding: 10px;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#book-now:hover {
+    background-color: rgb(164, 215, 235);
+}
+
+.description {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.reviews-section {
+    padding: 20px;
+}
+
+.review-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.reviewer {
+    font-size: 12px;
+    color: #888;
+}
+
+footer {
+    background-color: skyblue;
+    padding: 20px;
+    text-align: center;
+}

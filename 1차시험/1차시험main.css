@@ -83,8 +83,12 @@ nav button:hover {
     background-image: url(grand.jpg);
     background-size: cover;
     background-position: center;
+    
 }
 
+P {
+    color: white;
+}
 
 
 
@@ -107,7 +111,7 @@ nav button:hover {
 .slider h1 {
 
     margin-bottom: 20px;
-    color: white;
+    color: white
 
 }
 
